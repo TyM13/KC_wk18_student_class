@@ -34,7 +34,6 @@ from for_sale_cars fsc
 where `year` = '2019-01-01'
 
 
-
 select count(fsc.id)
 from for_sale_cars fsc inner join dealership d on fsc.dealership_id = d.id 
 group by d.id
@@ -54,5 +53,11 @@ having count(fsc.id) >=4;
 select count(fsc.id) 
 from for_sale_cars fsc inner join dealership d on fsc.dealership_id = d.id 
 where fsc.`year` >= '2020-01-01'
+group by d.id
+having count(fsc.id) >=5;
+
+select count(fsc.id) 
+from for_sale_cars fsc inner join dealership d on fsc.dealership_id = d.id 
+where fsc.`year` >= '2021-01-01' and fsc.model like('%x%')
 group by d.id
 having count(fsc.id) >=5;
