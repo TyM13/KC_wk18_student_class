@@ -19,9 +19,9 @@ select fsc.make, fsc.model, fsc.`year`
 from for_sale_cars fsc 
 order by fsc.`year` desc;
 
-select fsc.make, fsc.model, fsc.`year` 
-from for_sale_cars fsc 
-order by fsc.`year` asc
+select d.name , d.location 
+from dealership d 
+order by d.date_established asc
 limit 1;
 
 select fsc.make, fsc.model, fsc.`year`, d.name, d.location 
